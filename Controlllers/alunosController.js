@@ -1,9 +1,8 @@
-const conexao = require('../sequelize')
-const alunos = require('../models/alunos')
+import alunos from '../models/alunos.js'
 
 
 
-exports.obterAluno = async (requisicao, resposta) => {
+async function  obterAluno (requisicao, resposta) {
     try {
         const {id} = requisicao.params
         const aluno = await alunos.findByPk(id)
@@ -12,4 +11,8 @@ exports.obterAluno = async (requisicao, resposta) => {
     catch(erro) {
         resposta.status(500).json(erro) 
     }
+}
+
+export default {
+    obterAluno
 }

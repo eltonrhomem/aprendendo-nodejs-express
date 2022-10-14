@@ -1,8 +1,6 @@
-const { Sequelize } = require('sequelize')
-const sequelize = require('sequelize')
+import sequelize from 'sequelize'
+import configDataBase from './server.js'
 
-const configDataBase = require('./server')
+const conexao = new sequelize(configDataBase)
 
-const conexao = new Sequelize(configDataBase)
-
-module.exports = conexao
+export default conexao

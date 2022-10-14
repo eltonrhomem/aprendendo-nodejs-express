@@ -1,5 +1,5 @@
-const sequelize = require('../sequelize')
-const dataTypes = require('sequelize')
+import sequelize from '../sequelize.js'
+import  {DataTypes as dataTypes}  from 'sequelize'
 
 const alunos = sequelize.define('Aluno' , {
     nuidaluno: {
@@ -27,4 +27,4 @@ const alunos = sequelize.define('Aluno' , {
     timestamps: false,
 })
 
-module.exports = alunos
+export default alunos

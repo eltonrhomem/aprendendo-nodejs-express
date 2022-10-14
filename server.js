@@ -1,5 +1,8 @@
-require('dotenv').config()
-module.exports = {
+import * as dotenv from 'dotenv'
+dotenv.config()
+
+
+export default {
     dialect: process.env.DB_DIALECT,
     host: process.env.DB_HOST, 
     port: process.env.DB_PORT,

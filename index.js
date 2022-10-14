@@ -1,14 +1,15 @@
-const express = require('express')
+import express from 'express'
+import rotasAlunos from './rotas/alunos.js'
+import rotasEscolas from './rotas/escolas.js'
+
+
 const app = express()
-const Alunos = require('./Controlllers/alunosController')
+app.use(express.json())
 
 
-
-app.get('/alunos/:id',  (request, response) => {
-      Alunos.obterAluno(request, response)
-})
-
-
+app.use(rotasAlunos, 
+        rotasEscolas
+        )
 
 
 
