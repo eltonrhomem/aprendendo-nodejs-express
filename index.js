@@ -1,3 +1,4 @@
+import 'dotenv/config'
 import express from 'express'
 import rotasAlunos from './rotas/alunos.js'
 import rotasEscolas from './rotas/escolas.js'
